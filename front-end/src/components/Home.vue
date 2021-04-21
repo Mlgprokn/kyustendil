@@ -23,7 +23,7 @@ export default {
         scrollBar: false,
         navigation: true,
         navigationPosition: 'left',
-        sectionsColor: ['#D3D3D3', '#fff', '#D3D3D3', '#fff']                       
+        sectionsColor: ['#C2B9B0', '#C2CAD0', '#C2B9B0', '#E7717D', '#AFD275'],                  
       },
       locations: [
         {
