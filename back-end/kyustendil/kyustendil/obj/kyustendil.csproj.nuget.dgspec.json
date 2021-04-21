@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\kyustendil\\back-end\\kyustendil\\kyustendil\\kyustendil.csproj": {}
+    "C:\\Sipimu\\kyustendil\\back-end\\kyustendil\\kyustendil\\kyustendil.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\kyustendil\\back-end\\kyustendil\\kyustendil\\kyustendil.csproj": {
+    "C:\\Sipimu\\kyustendil\\back-end\\kyustendil\\kyustendil\\kyustendil.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\kyustendil\\back-end\\kyustendil\\kyustendil\\kyustendil.csproj",
+        "projectUniqueName": "C:\\Sipimu\\kyustendil\\back-end\\kyustendil\\kyustendil\\kyustendil.csproj",
         "projectName": "kyustendil",
-        "projectPath": "D:\\Projects\\kyustendil\\back-end\\kyustendil\\kyustendil\\kyustendil.csproj",
-        "packagesPath": "C:\\Users\\Mlgprokn\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\kyustendil\\back-end\\kyustendil\\kyustendil\\obj\\",
+        "projectPath": "C:\\Sipimu\\kyustendil\\back-end\\kyustendil\\kyustendil\\kyustendil.csproj",
+        "packagesPath": "C:\\Users\\tatja\\.nuget\\packages\\",
+        "outputPath": "C:\\Sipimu\\kyustendil\\back-end\\kyustendil\\kyustendil\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Mlgprokn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tatja\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,6 +39,16 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.24, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -57,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
