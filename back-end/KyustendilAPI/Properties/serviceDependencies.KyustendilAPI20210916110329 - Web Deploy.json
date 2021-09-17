@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "apis1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.ApiManagement/service/NekvoAPI/apis/kyustendilapi",
+      "type": "apis.azure"
+    },
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/kyustendilapidbserver/databases/KyustendilAPI_db",
+      "type": "mssql.azure",
+      "connectionId": "KyustendilDB",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}
