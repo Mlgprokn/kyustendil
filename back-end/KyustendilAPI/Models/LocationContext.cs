@@ -1,15 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace KyustendilAPI.Models
 {
     /// <summary>
     /// Database context for the place model
     /// </summary>
-    public class LocationContext : DbContext
+    public class LocationContext : IdentityDbContext
     {
         public LocationContext(DbContextOptions<LocationContext> options) : base(options) { }
 
