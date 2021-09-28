@@ -4,14 +4,16 @@ using KyustendilAPI.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace KyustendilAPI.Migrations
 {
     [DbContext(typeof(LocationContext))]
-    partial class PlaceContextModelSnapshot : ModelSnapshot
+    [Migration("20210928133216_addedlngandlattolocation")]
+    partial class addedlngandlattolocation
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

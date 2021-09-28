@@ -1,22 +1,29 @@
 <template>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-1">
-        <button type="button" class="btn btn-outline-dark">Filter</button>
-      </div>
-      <div class="col-sm-8">
-        <input type="text" class="form-control" placeholder="Search">
-      </div>
-      <div class="col-sm-2">
-        <button type="button" class="btn btn-outline-dark">Add Location</button>
-      </div>
-      <div class="row">
-        <div class="col-sm-4" v-for="location in locations" :key="location.id">
-            <Location v-bind:location="location" />
-        </div>
-      </div>
-    </div>
-  </div>
+  <v-container class="pa-4 text-center">
+    <v-row
+      class="fill-height"
+      align="center"
+      justify="center"
+    >
+      <v-col cols="8">
+        <v-text-field :rules="rules" prepend-icon="mdi-magnify"></v-text-field>
+        <v-btn elevation="2">Search <v-icon right dark>mdi-magnify</v-icon></v-btn>
+      </v-col>
+      <v-col cols="4">
+        <v-btn elevation="2">Add new location</v-btn>
+      </v-col>
+      <v-divider></v-divider>
+      <template v-for="(location, i) in locations">
+        <v-col
+          :key="i"
+          cols="12"
+          md="3"
+        >
+          <Location v-bind:location="location" />
+        </v-col>
+      </template>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
@@ -106,13 +113,5 @@ export default {
 };
 </script>
 
-<style scoped>
-.container {
-  margin-top: 50px;
-  padding-top: 50px;
-  padding-bottom: 40px;
-  border-radius: 2%;
-  background: #ccc;
-}
-</style>
+<style scoped></style>
 

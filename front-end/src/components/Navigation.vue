@@ -1,14 +1,22 @@
 <template>
   <div class="contrainer">
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-transparent">
-      <div class="ml-auto">
-        <div class="navbar-nav mr-auto">
-          <a class="nav-item nav-link active" href="#">Locations</a>
-          <a class="nav-item nav-link" href="#">History</a>
-        </div>
-      </div>
-    </nav>
+    <v-card>
+      <v-card-title>
+        <span v-text="title"></span>
+
+        <v-spacer></v-spacer>
+
+        <v-btn @click="$emit('action-btn:clicked')">
+          Action
+        </v-btn>
+      </v-card-title>
+
+      <v-card-text>
+        <slot></slot>
+      </v-card-text>
+    </v-card>
   </div>
+  
 </template>
 
 <script>

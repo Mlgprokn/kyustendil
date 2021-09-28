@@ -16,7 +16,7 @@
         public string Title { get; set; }
 
         /// <summary>
-        /// Description of the place
+        /// Picture of the place
         /// </summary>
         public string Picture { get; set; }
 
@@ -24,5 +24,15 @@
         /// The location on which the place can be found
         /// </summary>
         public string Information { get; set; }
+
+        /// <summary>
+        /// The latitude of the location
+        /// </summary>
+        public int Lat { get; set; }
+
+        /// <summary>
+        /// The longitude of the location
+        /// </summary>
+        public int Lgn { get; set; }
     }
 }

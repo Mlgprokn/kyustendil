@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace KyustendilAPI.Models.DTOs.Requests.Location
 {
+    /// <summary>
+    /// The location dto
+    /// </summary>
     public class LocationDTO
     {
         /// <summary>
@@ -20,7 +23,7 @@ namespace KyustendilAPI.Models.DTOs.Requests.Location
         public string Title { get; set; }
 
         /// <summary>
-        /// Description of the place
+        /// Picture of the place
         /// </summary>
         [Required]
         public string Picture { get; set; }
@@ -29,5 +32,17 @@ namespace KyustendilAPI.Models.DTOs.Requests.Location
         /// The location on which the place can be found
         /// </summary>
         public string Information { get; set; }
+
+        /// <summary>
+        /// The latitude of the location
+        /// </summary>
+        [Required]
+        public int Lat { get; set; }
+
+        /// <summary>
+        /// The longitude of the location
+        /// </summary>
+        [Required]
+        public int Lgn { get; set; }
     }
 }
