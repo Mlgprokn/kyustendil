@@ -10,6 +10,6 @@
     <WebStackScaffolding_LayoutPageFile />
     <WebStackScaffolding_DbContextTypeFullName>KyustendilAPI.Models.PlaceContext</WebStackScaffolding_DbContextTypeFullName>
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
-    <NameOfLastUsedPublishProfile>Z:\ASP.Net-Core\KyustendilAPI\KyustendilAPI\Properties\PublishProfiles\KyustendilAPI20210916110329 - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>Z:\test\kyustendil\back-end\KyustendilAPI\Properties\PublishProfiles\KyustendilAPI20210916110329 - Web Deploy1.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using KyustendilAPI.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace KyustendilAPI.Controllers
 {
@@ -20,38 +21,38 @@ namespace KyustendilAPI.Controllers
             _context = context;
         }
 
-        // GET: api/Places
+        // GET: api/Locations
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Location>>> GetPlaces()
+        public async Task<ActionResult<IEnumerable<Location>>> GetLocations()
         {
             return await _context.Locations.ToListAsync();
         }
 
-        // GET: api/Places/5
+        // GET: api/Locations/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Location>> GetPlace(int id)
+        public async Task<ActionResult<Location>> GetLocation(int id)
         {
-            var place = await _context.Locations.FindAsync(id);
+            var location = await _context.Locations.FindAsync(id);
 
-            if (place == null)
+            if (location == null)
             {
                 return NotFound();
             }
 
-            return place;
+            return location;
         }
 
-        // PUT: api/Places/5
+        // PUT: api/Locations/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<ActionResult<Location>> PutPlace(int id, Location place)
+        public async Task<ActionResult<Location>> PutLocation(int id, Location location)
         {
-            if (id != place.Id)
+            if (id != location.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(place).State = EntityState.Modified;
+            _context.Entry(location).State = EntityState.Modified;
 
             try
             {
@@ -69,34 +70,34 @@ namespace KyustendilAPI.Controllers
                 }
             }
 
-            return place;
+            return location;
         }
 
-        // POST: api/Places
+        // POST: api/Locations
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Location>> PostPlace(Location place)
+        public async Task<ActionResult<Location>> PostLocation(Location location)
         {
-            _context.Locations.Add(place);
+            _context.Locations.Add(location);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetPlace), new { id = place.Id }, place);
+            return CreatedAtAction(nameof(GetLocation), new { id = location.Id }, location);
         }
 
-        // DELETE: api/Places/5
+        // DELETE: api/Locations/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Location>> DeletePlace(int id)
+        public async Task<ActionResult<Location>> DeleteLocation(int id)
         {
-            var place = await _context.Locations.FindAsync(id);
-            if (place == null)
+            var location = await _context.Locations.FindAsync(id);
+            if (location == null)
             {
                 return NotFound();
             }
 
-            _context.Locations.Remove(place);
+            _context.Locations.Remove(location);
             await _context.SaveChangesAsync();
 
-            return place;
+            return location;
         }
 
         private bool PlaceExists(int id)

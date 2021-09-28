@@ -5,10 +5,10 @@
     "version": "v1"
   },
   "paths": {
-    "/api/Places": {
+    "/api/Locations": {
       "get": {
         "tags": [
-          "Places"
+          "Locations"
         ],
         "produces": [
           "text/plain",
@@ -21,7 +21,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/Place"
+                "$ref": "#/definitions/Location"
               }
             }
           }
@@ -29,7 +29,7 @@
       },
       "post": {
         "tags": [
-          "Places"
+          "Locations"
         ],
         "consumes": [
           "application/json",
@@ -46,7 +46,7 @@
             "in": "body",
             "name": "body",
             "schema": {
-              "$ref": "#/definitions/Place"
+              "$ref": "#/definitions/Location"
             }
           }
         ],
@@ -54,16 +54,16 @@
           "200": {
             "description": "Success",
             "schema": {
-              "$ref": "#/definitions/Place"
+              "$ref": "#/definitions/Location"
             }
           }
         }
       }
     },
-    "/api/Places/{id}": {
+    "/api/Locations/{id}": {
       "get": {
         "tags": [
-          "Places"
+          "Locations"
         ],
         "produces": [
           "text/plain",
@@ -83,14 +83,14 @@
           "200": {
             "description": "Success",
             "schema": {
-              "$ref": "#/definitions/Place"
+              "$ref": "#/definitions/Location"
             }
           }
         }
       },
       "put": {
         "tags": [
-          "Places"
+          "Locations"
         ],
         "consumes": [
           "application/json",
@@ -114,7 +114,7 @@
             "in": "body",
             "name": "body",
             "schema": {
-              "$ref": "#/definitions/Place"
+              "$ref": "#/definitions/Location"
             }
           }
         ],
@@ -122,14 +122,19 @@
           "200": {
             "description": "Success",
             "schema": {
-              "$ref": "#/definitions/Place"
+              "$ref": "#/definitions/Location"
             }
           }
         }
       },
       "delete": {
         "tags": [
-          "Places"
+          "Locations"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
         ],
         "parameters": [
           {
@@ -142,14 +147,17 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Location"
+            }
           }
         }
       }
     }
   },
   "definitions": {
-    "Place": {
+    "Location": {
       "type": "object",
       "properties": {
         "id": {
@@ -159,10 +167,10 @@
         "title": {
           "type": "string"
         },
-        "description": {
+        "picture": {
           "type": "string"
         },
-        "location": {
+        "information": {
           "type": "string"
         }
       }

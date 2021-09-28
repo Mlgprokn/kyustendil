@@ -22,11 +22,10 @@ export default {
 
 <style scoped>
 img {
-  width: 80%; /* You can set the dimensions to whatever you want */
+  width: 80%;
   height: 80%;
   border-radius: 2%;
 }
-
 
 .test {
     padding: 10px; 
