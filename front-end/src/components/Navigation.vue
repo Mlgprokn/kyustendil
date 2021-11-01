@@ -27,7 +27,4 @@ export default {
 </script>
 
 <style scoped>
-.right {
-  float: right;
-}
 </style>

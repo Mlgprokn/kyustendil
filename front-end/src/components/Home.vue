@@ -37,7 +37,7 @@
           <v-btn icon>
             <v-icon>mdi-dots-vertical</v-icon>
           </v-btn>
-          <v-btn elevation="2">Add new location </v-btn>
+          <v-btn elevation="2" @click="$router.push('about')">Add new location </v-btn>
         </v-toolbar>
       </v-col>
       <template v-for="(location, i) in currentLocations">
