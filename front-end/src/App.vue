@@ -1,18 +1,18 @@
 <template>
-  <div id="app">
-    <Navigation />
-    <Home />
-  </div>
+  <v-app>
+    <v-main>
+      <Navigation />
+      <router-view/>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import Home from "./components/Home.vue";
 import Navigation from './components/Navigation.vue';
 
 export default {
   name: "App",
   components: {
-    Home,
     Navigation,
   },
 };

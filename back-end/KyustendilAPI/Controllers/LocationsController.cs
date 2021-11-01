@@ -40,6 +40,7 @@ namespace KyustendilAPI.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<LocationResponse>> GetLocation(int id)
         {
+            System.Console.WriteLine("laina");
             var location = await _context.Locations.FindAsync(id);
 
             if (location == null)
@@ -61,7 +62,7 @@ namespace KyustendilAPI.Controllers
         // PUT: api/Locations/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<ActionResult<LocationResponse>> PutLocation(int id, [FromForm] LocationDTO locationDTO)
+        public async Task<ActionResult<LocationResponse>> PutLocation(int id, [FromBody] LocationDTO locationDTO)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
 
@@ -106,13 +107,15 @@ namespace KyustendilAPI.Controllers
         // POST: api/Locations
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<LocationResponse>> PostLocation([FromForm] LocationDTO locationDTO) 
+        public async Task<ActionResult<LocationResponse>> PostLocation([FromBody] LocationDTO locationDTO)
         {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
             var location = new Location
             {
                 Title = locationDTO.Title,
                 Picture = locationDTO.Picture,
-                Information = locationDTO.Picture
+                Information = locationDTO.Information
             };
 
             _context.Locations.Add(location);

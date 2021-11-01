@@ -1,22 +1,23 @@
 <template>
-  <div class="contrainer">
-    <v-card>
-      <v-card-title>
-        <span v-text="title"></span>
+  <v-bottom-navigation>
+    <v-btn value="recent">
+      <span>Recent</span>
 
-        <v-spacer></v-spacer>
+      <v-icon>mdi-history</v-icon>
+    </v-btn>
 
-        <v-btn @click="$emit('action-btn:clicked')">
-          Action
-        </v-btn>
-      </v-card-title>
+    <v-btn value="favorites">
+      <span>Favorites</span>
 
-      <v-card-text>
-        <slot></slot>
-      </v-card-text>
-    </v-card>
-  </div>
-  
+      <v-icon>mdi-heart</v-icon>
+    </v-btn>
+
+    <v-btn value="nearby" class="right">
+      <span>Account</span>
+
+      <v-icon>mdi-account</v-icon>
+    </v-btn>
+  </v-bottom-navigation>
 </template>
 
 <script>
@@ -26,7 +27,7 @@ export default {
 </script>
 
 <style scoped>
-.navbar {
-  position: absolute;
+.right {
+  float: right;
 }
 </style>
