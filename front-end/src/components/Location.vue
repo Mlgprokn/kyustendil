@@ -4,6 +4,9 @@
       :elevation="hover ? 12 : 2"
       :class="{ 'on-hover': hover }"
     >
+      <p class="mt-4 subheading text-left">
+        {{ location.title }}
+      </p>
       <v-img
         :src="location.image"
         height="225px"
@@ -13,12 +16,9 @@
             class="fill-height flex-column"
             justify="space-between"
           >
-            <p class="mt-4 subheading text-left">
-              {{ location.title }}
-            </p>
           </v-row>
         </v-card-title>
-      </v-img> 
+      </v-img>
     </v-card>
   </v-hover>
 </template>
@@ -37,5 +37,9 @@ export default {
 
 .v-card:not(.on-hover) {
   opacity: 0.6;
+ }
+
+ .subheading {
+   font-size: 30px;
  }
  </style>
