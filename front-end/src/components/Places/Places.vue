@@ -7,10 +7,10 @@
     >
       <v-col cols="12">
         <v-toolbar>
-          <v-toolbar-title>Search places</v-toolbar-title>
+          <v-toolbar-title>Search places:</v-toolbar-title>
           <v-autocomplete
             v-model="selected"
-            :items="allLocations"
+            :items="allPlaces"
             class="mx-4"
             flat
             hide-details
@@ -18,7 +18,7 @@
             item-text="title"
             item-value="title"
             solo-inverted
-            v-on:change="search"
+            @change="search"
           >
             <template v-slot:selection="data">
               {{ data.item.title }}
@@ -37,16 +37,16 @@
           <v-btn icon>
             <v-icon>mdi-dots-vertical</v-icon>
           </v-btn>
-          <v-btn elevation="2" @click="$router.push('about')">Add new location </v-btn>
+          <v-btn elevation="2" @click="$router.push('/places/add')">Add new place </v-btn>
         </v-toolbar>
       </v-col>
-      <template v-for="(location, i) in currentLocations">
+      <template v-for="(place, i) in currentPlaces">
         <v-col
           :key="i"
           cols="12"
           md="3"
         >
-          <Location v-bind:location="location" />
+          <Place v-bind:place="place" />
         </v-col>
       </template>
     </v-row>
@@ -54,20 +54,20 @@
 </template>
 
 <script>
-import Location from './Location.vue';
+import Place from './Place.vue';
 export default {
   name: "Home",
   components: {
-    Location
+    Place
   },
   methods: {
     search() {
       console.log(this.selected);
       if (this.selected == null) {
-        this.currentLocations = this.allLocations;
+        this.currentPlaces = this.allPlaces;
         return;
       }
-      this.currentLocations = this.allLocations.filter(l => l.title.toLowerCase() == this.selected.toLowerCase());
+      this.currentPlaces = this.allPlaces.filter(l => l.title.toLowerCase() == this.selected.toLowerCase());
     }
   },
   data: function () {
@@ -82,8 +82,8 @@ export default {
       },
       selected: [],
       items: ["lasd", "asd", "1"],
-      currentLocations: [],
-      allLocations: [
+      currentPlaces: [],
+      allPlaces: [
         {
           id: 1,
           image: "https://www.pmgkn.com/images/phocagallery/pmg-gallery-2020/thumbs/phoca_thumb_l_pmg-dvor-esen_2018_17.jpg",
@@ -151,7 +151,7 @@ export default {
     };
   },
   mounted() {
-    this.currentLocations = this.allLocations;
+    this.currentPlaces = this.allPlaces;
   },
 };
 </script>

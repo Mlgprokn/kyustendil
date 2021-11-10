@@ -1,14 +1,15 @@
 <template>
-  <div>
-    asd
-  </div>
+  <h1 class="cs">Comming soon...</h1>
 </template>
 
 <script>
 export default {
-  name: "Location",
+  name: "Account",
 };
 </script>
 
 <style scoped>
+.cs {
+    margin-top: 2rem;
+}
 </style>

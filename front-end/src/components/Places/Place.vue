@@ -4,11 +4,11 @@
       :elevation="hover ? 12 : 2"
       :class="{ 'on-hover': hover }"
     >
-      <p class="mt-4 subheading text-left">
-        {{ location.title }}
+      <p class="mt-4 subheading">
+        {{ place.title }}
       </p>
       <v-img
-        :src="location.image"
+        :src="place.image"
         height="225px"
       >
         <v-card-title class="text-h6 white--text">
@@ -25,8 +25,8 @@
 
 <script>
 export default {
-  name: "Location",
-  props: ["location"],
+  name: "Place",
+  props: ["place"],
 };
 </script>
 

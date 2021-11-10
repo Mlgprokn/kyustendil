@@ -1,18 +1,18 @@
 <template>
   <v-bottom-navigation>
-    <v-btn value="recent">
-      <span>Recent</span>
+    <v-btn value="places" @click="$router.push('/places')">
+      <span>Places</span>
+
+      <v-icon>mdi-map-marker</v-icon>
+    </v-btn>
+
+    <v-btn value="places" @click="$router.push('/history')">
+      <span>History</span>
 
       <v-icon>mdi-history</v-icon>
     </v-btn>
 
-    <v-btn value="favorites">
-      <span>Favorites</span>
-
-      <v-icon>mdi-heart</v-icon>
-    </v-btn>
-
-    <v-btn value="nearby" class="right">
+    <v-btn value="account" @click="$router.push('/account')">
       <span>Account</span>
 
       <v-icon>mdi-account</v-icon>

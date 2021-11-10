@@ -1,20 +1,32 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../components/Home.vue";
-import LocationShow from "../components/LocationShow.vue";
+import Places from "../components/Places/Places.vue";
+import AddPlace from "../components/Places/AddPlace.vue";
+import Account from "../components/Account/Account.vue";
+import History from "../components/History/History.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/places",
-    name: "Home",
-    component: Home,
+    name: "Places",
+    component: Places,
   },
   {
     path: "/places/add",
-    name: "LocationShow",
-    component: LocationShow
+    name: "AddPlace",
+    component: AddPlace
+  },
+  {
+    path: "/account",
+    name: "Account",
+    component: Account
+  },
+  {
+    path: "/history",
+    name: "History",
+    component: History
   },
 ];
 

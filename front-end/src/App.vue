@@ -1,8 +1,8 @@
 <template>
-  <v-container class="pa-4 text-center">
+  <v-app class="pa-4 text-center">
     <Navigation />
-    <router-view></router-view>>
-  </v-container>
+    <router-view></router-view>
+  </v-app>
 </template>
 
 <script>
